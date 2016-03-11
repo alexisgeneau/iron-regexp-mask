@@ -55,6 +55,10 @@ Example:
         },
         message:{
           type:String
+        },
+        mask:{
+          type: String,
+          value: "**********"
         }
       },
 
@@ -62,9 +66,9 @@ Example:
         for(i=0;i<regExp.length;i++){
           exp=regExp[i];
         while(message.match(exp) != null){
-        
+
         var match = message.match(exp)[0];
-        message= message.replace(match,"***********");
+        message= message.replace(match,this.mask);
       }
     }
         return message;

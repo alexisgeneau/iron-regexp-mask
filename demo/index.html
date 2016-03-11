@@ -19,9 +19,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <body unresolved>
   <template is="dom-bind">
 
-    <iron-regexp-mask reg-exp='[ "0[1-9]([-. ]?[0-9]{2}){4}" , "([a-z]+)@([a-z]+).([a-z]+)" ]' value="{{value}}" message="voila mon numero: 01 23 45 67 89 ou 01-23-45-67-89 ou 0123456789 et mon email : test@test.fr" ></iron-regexp-mask>
+    <iron-regexp-mask reg-exp='[ "0[1-9]([-. ]?[0-9]{2}){4}" , "[1-9]{3}([-. ]?[0-9]{2}){4}" , "([a-z]+)@([a-z]+).([a-z]+)" ]' mask="◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎◼︎" value="{{value}}" message="voila mon numero: 01 23 45 67 89 ou 01-23-45-67-89 ou 0123456789 ou +33123456789 et mon email : test@test.fr" ></iron-regexp-mask>
     <h1>before</h1>
-    <p>voila mon numero: 01 23 45 67 89 ou 01-23-45-67-89 ou 0123456789 et mon email : test@test.fr</p>
+    <p>voila mon numero: 01 23 45 67 89 ou 01-23-45-67-89 ou 0123456789 ou +33123456789 et mon email : test@test.fr</p>
     <h1>after</h1>
     <p>[[value]]</p>
 
